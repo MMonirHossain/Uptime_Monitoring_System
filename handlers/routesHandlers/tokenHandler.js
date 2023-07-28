@@ -134,7 +134,7 @@ handler._token.delete = (requestProperties, callback)=>{
     }
 };
 
-handler._token.verify = (id, phone, callback)=>{
+handler._token.verify = ( id, phone, callback)=>{
     dataa.read('tokens',id,(err1,tokenData)=>{
         if(!err1 && tokenData){
             if(parseJSON(tokenData).phone === phone && parseJSON(tokenData).expires > Date.now()){
@@ -148,4 +148,5 @@ handler._token.verify = (id, phone, callback)=>{
         }
     });
 };
+
 module.exports = handler;

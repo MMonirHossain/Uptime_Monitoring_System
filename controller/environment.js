@@ -15,12 +15,14 @@ environments.stagging ={
     port : 3000,
     envName: 'stagging',
     secretkey: 'Monir',
+    maxChecks: 5,
 };
 
 environments.production ={
     port : 4000,
     envName: 'production',
     secretkey: 'monir',
+    maxChecks: 5,
 };
 
 
