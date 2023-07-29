@@ -37,7 +37,7 @@ handler._token.post = (requestProperties, callback)=>{
             let hashedPassword =  hash(password); 
             if(hashedPassword===parseJSON(userData).password){
                 let tokenId = createRandomString(20);
-                let expires = Date.now() + 60*60*1000;
+                let expires = Date.now() + 7*24*60*60*1000;// 7days
                 let tokenObject = {
                     'phone': phone,
                     'id': tokenId,
@@ -70,6 +70,7 @@ handler._token.get = (requestProperties, callback)=>{
         dataa.read('tokens',id,(err1,tokenData)=>{
             if(!err1 && tokenData){
                 const token = {...parseJSON(tokenData)};
+
                 callback(200,token);
             }else{
                 callback(404,{'error': 'requested token not found',});
@@ -137,6 +138,8 @@ handler._token.delete = (requestProperties, callback)=>{
 handler._token.verify = ( id, phone, callback)=>{
     dataa.read('tokens',id,(err1,tokenData)=>{
         if(!err1 && tokenData){
+            
+            
             if(parseJSON(tokenData).phone === phone && parseJSON(tokenData).expires > Date.now()){
                 callback(true);
             }else{
