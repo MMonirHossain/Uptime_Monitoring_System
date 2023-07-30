@@ -18,7 +18,7 @@ environments.stagging ={
     maxChecks: 5,
     twilio:{
         fromPhone:'+myphone',
-        accountSid:'mysid',
+        accountSid:'mySid',
         authToken:'myauth',
     }
 };
@@ -30,7 +30,7 @@ environments.production ={
     maxChecks: 5,
     twilio:{
         fromPhone:'+myphone',
-        accountSid:'mysid',
+        accountSid:'mySid',
         authToken:'myauth',
     }
 };
