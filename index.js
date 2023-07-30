@@ -10,11 +10,17 @@ const http = require('http');
 const {handleReqRes}= require('./controller/handleReqRes.js');
 const environment= require('./controller/environment.js');
 //const dataa = require('./lib/data.js');
-
+const {sentTwilioSms}= require('./controller/notifications.js');
 
 //app object - module scaffolding
 
 const app = {};
+
+//testing the notification
+sentTwilioSms('01948325474','Hello World',(err)=>{
+    console.log(err);
+});
+
 
 /*
 * testing file system functions

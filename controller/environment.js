@@ -16,6 +16,11 @@ environments.stagging ={
     envName: 'stagging',
     secretkey: 'Monir',
     maxChecks: 5,
+    twilio:{
+        fromPhone:'+14705929351',
+        accountSid:'AC91e71b75cfef13f0d0ae140769118df6',
+        authToken:'f7997d26956810e4377a1c79ebeab611',
+    }
 };
 
 environments.production ={
@@ -23,6 +28,11 @@ environments.production ={
     envName: 'production',
     secretkey: 'monir',
     maxChecks: 5,
+    twilio:{
+        fromPhone:'+14705929351',
+        accountSid:'AC91e71b75cfef13f0d0ae140769118df6',
+        authToken:'f7997d26956810e4377a1c79ebeab611',
+    }
 };
 
 
