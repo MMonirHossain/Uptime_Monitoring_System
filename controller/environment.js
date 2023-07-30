@@ -17,9 +17,9 @@ environments.stagging ={
     secretkey: 'Monir',
     maxChecks: 5,
     twilio:{
-        fromPhone:'+14705929351',
-        accountSid:'AC91e71b75cfef13f0d0ae140769118df6',
-        authToken:'f7997d26956810e4377a1c79ebeab611',
+        fromPhone:'+myphone',
+        accountSid:'mysid',
+        authToken:'myauth',
     }
 };
 
@@ -29,9 +29,9 @@ environments.production ={
     secretkey: 'monir',
     maxChecks: 5,
     twilio:{
-        fromPhone:'+14705929351',
-        accountSid:'AC91e71b75cfef13f0d0ae140769118df6',
-        authToken:'f7997d26956810e4377a1c79ebeab611',
+        fromPhone:'+myphone',
+        accountSid:'mysid',
+        authToken:'myauth',
     }
 };
 
